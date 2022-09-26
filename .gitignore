@@ -1,4 +1,7 @@
 /.idea/
 /out/
-/target/
+/*/target/
 *.iml
+/.mvn/
+mvnw.cmd
+mvnw

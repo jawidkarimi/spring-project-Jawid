@@ -5,7 +5,8 @@ import com.cydeo.bean_annotation.casefactory.Case;
 import com.cydeo.bean_annotation.monitorfactory.Monitor;
 import com.cydeo.bean_annotation.motherboardfactory.Motherboard;
 
-public class PC {
+public class
+PC {
 
     private Case theCase;
     private Monitor monitor;
