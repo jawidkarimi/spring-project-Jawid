@@ -18,6 +18,54 @@
 <h2 th:text="${students.get(1).firstName+' '+students.get(1).lastName}"></h2>
 <h2 th:text="${students.get(2).firstName+' '+students.get(2).lastName}"></h2>
 
+<!--link-->
+<h2>
+<a th:href="@{https://cydeo.com}">Cydeo Page</a>
+    <a th:href="@{/student/welcome}">Welcome</a>
+</h2>
+
+<!--Adding Parameters in Link-->
+<h2>
+    <a th:href="@{/student/welcome(id=3)}">Link2</a>
+</h2>
+
+<h2>
+    <a th:href="@{/student/welcome(name=${students.get(0).firstName})}">Link</a>
+</h2>
+
+<!--Iteration-->
+<h2>Printing Students details</h2>
+<ul>
+    <li th:each="student:${students}" th:text="${student}"></li>
+</ul>
+
+<h2>Printing Students Firstname</h2>
+<ul>
+    <li th:each="student:${students}" th:text="${student.firstName}"></li>
+</ul>
+
+<h2>Printing Student's in table</h2>
+
+<table>
+    <thread>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>State</td>
+    </tr>
+    </thread>
+    <tbody>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.firstName}"></td>
+        <td th:text="${student.lastName}"></td>
+        <td th:text="${student.age}"></td>
+        <td th:text="${student.state}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
 
 
 </body>
