@@ -31,4 +31,6 @@ public class Student {
     @Enumerated(EnumType.STRING)
 //    @Enumerated(EnumType.ORDINAL)   if we don't put, it is already ordinal
     private Gender gender;
+
+    private String city;
 }
