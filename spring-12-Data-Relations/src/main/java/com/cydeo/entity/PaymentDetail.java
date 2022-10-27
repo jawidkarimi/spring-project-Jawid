@@ -20,8 +20,11 @@ public class PaymentDetail {
     private BigDecimal merchantPayoutAmount;
     private BigDecimal commissionAmount;
 
-@Column(columnDefinition = "DATE")
+    @Column(columnDefinition = "DATE")
     private LocalDate payoutDate;
+
+    @OneToOne(mappedBy = "paymentDetail")
+    private Payment payment;
 
     public PaymentDetail(BigDecimal merchantPayoutAmount, BigDecimal commissionAmount, LocalDate payoutDate) {
         this.merchantPayoutAmount = merchantPayoutAmount;
